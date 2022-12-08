@@ -3,6 +3,12 @@ package tech.strategio;
 import java.util.Scanner;
 
 public class LoanCalculator {
+    static int getRemainingAmount(int amount, int months){
+        for(int i = 0; i < months; i++){
+            amount -= amount/10;
+        }
+        return amount;
+    }
 
     /**
      * TODO: finish out this JavaDoc comment block.
@@ -13,7 +19,7 @@ public class LoanCalculator {
      */
     static int getRemainingAmountIn3Months(int amount) {
         // TODO: Rewrite this method
-        return -1;
+        return getRemainingAmount(amount, 3);
     }
 
     public static void main(String[] args) {
